@@ -1,11 +1,10 @@
-import React, {useState} from 'react' /* useState is a HOOK */
+import React, {useState} from 'react' 
 import copy from "copy-to-clipboard";
 import PropTypes from'prop-types';
 
 export default function (props) {
   const [copyText, setCopyText] = useState('');
   const[text,setText]=useState('');
-  /* SYNTAX for changing text: setText("newtext") */
   const upCase=(event)=>{
     let newText=text.toUpperCase();
     setText(newText);
@@ -25,8 +24,8 @@ export default function (props) {
     return text.split(/\s+/).filter((element)=>{return element.length!==0}).length;
   }
 
-  const handleOnChange=(event)=>{ /* event refers to change event */
-  setText(event.target.value);/* video#7 */
+  const handleOnChange=(event)=>{ 
+  setText(event.target.value);
   }
   return (
     <>
@@ -41,7 +40,7 @@ export default function (props) {
   </div>
    <div className='container my-4' style={{color:props.mode==='light'?'#010101':'#FFFFFF'}} >
     <h2>Text Review</h2>
-    <p><b>{countWord()}</b> words, <b>{text.length}</b> characters</p> {/* text.split(" ").length gives an array of words */}
+    <p><b>{countWord()}</b> words, <b>{text.length}</b> characters</p> 
 
     <p>Average Read: <b>{countWord()*0.005}</b> Minutes</p>
    </div>

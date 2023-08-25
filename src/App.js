@@ -1,10 +1,8 @@
 import './App.css';
-/* import About from './Components/About'; */
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
 import Textarea from './Components/Textarea';
 import React, {useState} from 'react';
-/* import {Routes, Route} from 'react-router-dom' */
 
 function App() {
   const[mode,setMode]=useState('light');
@@ -36,10 +34,6 @@ function App() {
   return (<>
   <Navbar title='TextUtils' one='Home' two='About' mode={mode} edText={edText} toggleMode={toggleMode}/>
   <Alert alert={alert}/>
-  {/* <Routes>
-  <Route path="/" element={<Textarea showAlert={showAlert} heading='Enter Your Text Below:' mode={mode}/>}/>
-  <Route path="/about" element={<About mode={mode} />}/>
-  </Routes> */}
   <Textarea showAlert={showAlert} heading='Enter Your Text Below:' mode={mode}/>
 </>
   );

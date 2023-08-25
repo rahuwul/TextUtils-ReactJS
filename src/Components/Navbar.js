@@ -1,9 +1,7 @@
 import React from 'react'
-/* type rfc for the template */
-/* import { Link } from 'react-router-dom'; */
 import PropTypes from 'prop-types';
 
-export default function Navbar(props) { /* props is written for passing props */
+export default function Navbar(props) { 
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={`${props.mode}`}>
@@ -17,9 +15,6 @@ export default function Navbar(props) { /* props is written for passing props */
         <li className="nav-item">
           <a href="#" className="nav-link active" aria-current="page" >{props.one}</a>
         </li>
-{/*         <li className="nav-item">
-          <Link to="/about" className="nav-link" href="#">{props.two}</Link>
-        </li> */}
       </ul>
       <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
   <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
